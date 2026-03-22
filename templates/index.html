@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shieldy</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2e004f 0%, #4b006e 100%);
+            color: #ffffff;
+            padding: 40px 20px;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: floatIn 1s ease forwards;
+        }
+
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 36px;
+            font-weight: 500;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+        }
+
+        .header h1:hover {
+            color: #f0e5ff;
+            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+        }
+
+        .header h2 {
+            font-size: 18px;
+            font-weight: 400;
+            color: #ffffff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .header h2:hover {
+            color: #f0e5ff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .button-container {
+            text-align: center;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: floatIn 1s ease forwards;
+        }
+
+        .button-container button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #8e44ad;
+            color: #ffffff;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s, color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-container button:hover {
+            background-color: #732d91;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px); 
+        }
+
+        .button-container button:active {
+            transform: translateY(1px); 
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .description-box {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+            color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .description-box ul {
+            margin-left: 20px;
+            padding-left: 10px;
+        }
+
+        .description-box p {
+            margin-bottom: 15px;
+        }
+
+        @keyframes floatIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+
+    <script>
+        function loadPage() {
+            window.location.href = '/login';
+        }
+    </script>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Shieldy</h1>
+        <h2>Light Tools. Strong Shield.</h2>
+    </div>
+
+    <div class="button-container">
+        <div class="description-box">
+            <p>Cybersecurity doesn't have to be scary. Shieldy is a simple toolkit that helps you stay safe online — no jargon, no fuss.</p>
+
+            <p>With just a few clicks, you can:</p>
+            <ul>
+                <li><strong>🔗 Spot Suspicious Links:</strong> Check if a URL looks sketchy or dangerous before clicking.</li>
+                <li><strong>🛡️ Test Your Privacy:</strong> Take the “Am I Oversharing?” quiz and see how much info you’re unknowingly giving away.</li>
+                <li><strong>🕵️‍♀️ Hide Messages in Images:</strong> Try the Steganography Toy — a fun way to embed secret text into image files, like digital invisible ink.</li>
+            </ul>
+
+            <p>Whether you're a student, new to the web, or just curious — Shieldy gives you the tools to browse smarter, not harder.</p>
+        </div>
+        <br>
+        <button onclick="loadPage()">Login</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Quiz</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2e004f 0%, #4b006e 100%);
+            color: #ffffff;
+            margin: 0;
+            min-height: 100vh;
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+        }
+
+        h1 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+            transform: translateX(-100%);
+            animation: slideIn 1s ease forwards;
+        }
+
+        .instructions {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 30px;
+            margin: 30px 0;
+            max-width: 700px;
+            text-align: left;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            opacity: 0;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        .instructions h2 {
+            margin-top: 0;
+            font-size: 24px;
+            color: #f0e5ff;
+        }
+
+        .instructions ul {
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .start-button {
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #8e44ad;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 0.8s;
+        }
+
+        .start-button:hover {
+            background-color: #732d91;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .start-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .back-link {
+            margin-top: 40px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s;
+            animation: fadeIn 1s ease forwards;
+            animation-delay: 1s;
+        }
+
+        .back-link:hover {
+            color: #cccccc;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>🛡️ "Am I Oversharing?" Quiz</h1>
+
+    <div class="instructions">
+        <h2>📋 Instructions:</h2>
+        <ul>
+            <li>Answer each question honestly based on your real online behavior.</li>
+            <li>Each option carries a score from 0 to 5 points.</li>
+            <li>Total score ranges from 0 (oversharing) to 100 (privacy pro).</li>
+        </ul>
+    </div>
+
+    <form method="GET" action="{{ url_for('quiz') }}">
+        <button type="submit" class="start-button">Start Quiz</button>
+    </form>
+
+    <a class="back-link" href="{{ url_for('quiz_main') }}">Back to Home</a>
+
+</body>
+</html>

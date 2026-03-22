@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suspicious URL Awareness</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2e004f, #4b006e);
+            color: #ffffff;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.07);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 900px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 30px;
+            color: #f1c40f;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 15px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .tip {
+            font-style: italic;
+            color: #dddddd;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        .action-button {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 12px 24px;
+            background-color: #8e44ad;
+            color: #fff;
+            font-weight: 500;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .action-button:hover {
+            background-color: #732d91;
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            margin-top: 30px;
+            display: block;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .back-link:hover {
+            color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Suspicious URL Awareness</h1>
+    <div class="container">
+        <p>In today’s digital world, **one bad click** can open the door to identity theft, account compromise, or malware infection. Cybercriminals often disguise malicious URLs to trick users into visiting fake websites that steal your data.</p>
+
+        <h2>⚠️ What Can Go Wrong If You Click a Suspicious Link?</h2>
+        <ul>
+            <li>💳 <strong>Phishing attacks</strong> that steal your login credentials and financial info.</li>
+            <li>🦠 <strong>Malware downloads</strong> that infect your device without you realizing.</li>
+            <li>📸 <strong>Spyware or keyloggers</strong> that monitor what you type or access.</li>
+            <li>🔐 <strong>Account takeovers</strong> via fake login pages or password reset scams.</li>
+        </ul>
+
+        <h2>📩 Where Do Suspicious Links Appear?</h2>
+        <ul>
+            <li>Emails that urge you to verify, update, or reset passwords</li>
+            <li>SMS messages pretending to be from banks, delivery companies, or government bodies</li>
+            <li>Social media messages offering free giveaways or “shocking” content</li>
+            <li>Fake websites in search results or online ads</li>
+        </ul>
+
+                <h2>📚 How to Read a URL</h2>
+        <p>Understanding how a URL is structured helps detect fake or malicious links.</p>
+
+        <div class="url-display">
+            <span class="protocol">https://</span>
+            <span class="subdomain">www.</span>
+            <span class="domain">example.com</span>
+            <span class="path">/login</span>
+            <span class="query">?user=abc</span>
+        </div>
+
+        <ul>
+            <li><strong>Protocol:</strong> <code>https://</code> – Always look for HTTPS for secure communication.</li>
+            <li><strong>Subdomain:</strong> <code>www.</code> – Or other prefixes like <code>mail.</code>, <code>account.</code></li>
+            <li><strong>Domain:</strong> <code>example.com</code> – This is the real site identity. Be alert for lookalikes like <code>go0gle.com</code> or <code>secure-example-login.com</code>.</li>
+            <li><strong>Path:</strong> <code>/login</code> – The specific page you're accessing.</li>
+            <li><strong>Query:</strong> <code>?user=abc</code> – Sometimes contains data; be careful what you enter in such URLs.</li>
+        </ul>
+
+        <h2>🚩 Red Flags in Suspicious URLs</h2>
+        <ul>
+            <li>Weird TLDs like <code>.ru</code>, <code>.xyz</code>, <code>.top</code>, etc.</li>
+            <li>Typosquatting: e.g., <code>go0gle.com</code> instead of <code>google.com</code></li>
+            <li>Presence of <code>@</code> symbols (used to trick users)</li>
+            <li>Too many numbers in the domain (e.g., <code>free123secure-login.ru</code>)</li>
+            <li>Double-encoded text or unreadable paths</li>
+        </ul>
+
+        <h2>🔍 How Can You Spot a Suspicious URL?</h2>
+        <ul>
+            <li>Weird-looking domain names (like <code>go0gle.com</code> or <code>secure-paypa1.com</code>)</li>
+            <li>Too many hyphens, numbers, or encoded characters</li>
+            <li>Use of shady top-level domains like <code>.xyz</code>, <code>.ru</code>, <code>.top</code>, etc.</li>
+            <li>Presence of <code>@</code> symbols, which can redirect to hidden destinations</li>
+        </ul>
+
+        <h2>🛠️ What Can You Do to Stay Safe?</h2>
+        <ul>
+            <li>Always hover over a link to preview the real URL</li>
+            <li>Don’t click links in emails or texts from unknown senders</li>
+            <li>Use a **link checker tool** like the one in Shieldy before opening a suspicious URL</li>
+            <li>Keep your browser, antivirus, and operating system updated</li>
+            <li>Use strong, unique passwords and enable 2FA on all accounts</li>
+        </ul>
+
+        <p class="tip">💡 Even if a link looks safe, double-checking is never a bad idea.</p>
+
+        <a class="action-button" href="{{ url_for('suslink') }}">🔗 Try the Suspicious Link Checker</a>
+        <br>
+        <a class="back-link" href="{{ url_for('quiz_main') }}">Back to Home</a>
+    </div>
+</body>
+</html>

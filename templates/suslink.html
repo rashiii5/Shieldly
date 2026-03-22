@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Suspicious Link Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2e004f, #4b006e);
+            color: #ffffff;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        input[type="text"] {
+            padding: 12px;
+            width: 400px;
+            border-radius: 6px;
+            border: none;
+            font-size: 16px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #8e44ad;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #732d91;
+        }
+
+        .result-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            width: 100%;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .result-box h3 {
+            margin-top: 0;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .result-box p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .action-buttons {
+            margin-top: 20px;
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .tip {
+            margin-top: 25px;
+            font-style: italic;
+            font-size: 16px;
+            color: #ddd;
+            text-align: center;
+        }
+
+        .back-link {
+            margin-top: 40px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🔗 Suspicious Link Checker</h1>
+
+    <form method="POST" action="{{ url_for('suslink') }}">
+        <input type="text" name="url" placeholder="Paste a URL here..." required>
+        <button type="submit">Check URL</button>
+    </form>
+
+    {% if result %}
+    <div class="result-box">
+        <h3>🔍 URL Analysis</h3>
+        <p><strong>🌐 Domain:</strong> {{ result.parsed.netloc }}</p>
+        <p><strong>🧩 Path:</strong> {{ result.parsed.path[:60] }}{% if result.parsed.path|length > 60 %}...{% endif %}</p>
+
+        <p><strong>🔎 Detected Issues:</strong></p>
+        {% if result.reasons %}
+            <ul>
+                {% for issue in result.reasons %}
+                    <li style="margin-bottom: 15px;">
+                        <strong>{{ issue.title }}</strong><br>
+                        <span style="font-size: 14px; color: #ddd;">{{ issue.details }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>✅ This link looks clean!</p>
+        {% endif %}
+
+        <div class="action-buttons">
+            <button onclick="copyClean()">📋 Copy Clean URL</button>
+            <button onclick="reportURL()">🚩 Report</button>
+        </div>
+
+        <p class="tip">💡 Tip: Always hover over a link to preview where it really goes before clicking.</p>
+    </div>
+    {% endif %}
+    
+    <br>
+    <button class="quiz-button" onclick="location.href='{{ url_for('link_awareness') }}'">Suspicious URL Awareness</button>
+
+    <a class="back-link" href="{{ url_for('quiz_main') }}">Back to Home</a>
+
+    <script>
+        function copyClean() {
+            const cleanURL = "{{ result.clean_url if result else '' }}";
+            navigator.clipboard.writeText(cleanURL);
+            alert("Clean URL copied to clipboard!");
+        }
+
+        function reportURL() {
+            alert("🚩 Thank you for reporting. We'll review the link for potential threats.");
+        }
+    </script>
+</body>
+</html>

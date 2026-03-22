@@ -1,0 +1,170 @@
+📋 Instructions:
+Select the option that best reflects your behavior.
+Each question is scored out of 5 points.
+Maximum score: 100
+Minimum score: 0
+
+Do you reuse the same password for multiple accounts?
+A. Never – 5 points
+B. Sometimes – 3 points
+C. Always – 0 points
+
+Do you use a password manager?
+A. Yes, always – 5
+B. Occasionally – 3
+C. Never – 0
+
+Are your passwords typically 12 characters or longer and contain symbols/numbers?
+A. Always – 5
+B. Sometimes – 3
+C. Rarely or Never – 0
+
+Do you use two-factor authentication (2FA) on important accounts (email, banking, social media)?
+A. Yes, on all – 5
+B. Only on a few – 3
+C. Not at all – 0
+
+Do you leave your devices (laptop/phone) unlocked in public or shared spaces?
+A. Never – 5
+B. Sometimes – 3
+C. Often – 0
+
+Do you share your passwords or PINs with friends/family?
+A. No, never – 5
+B. Rarely – 3
+C. Yes – 0
+
+Is your main social media profile public?
+A. No, it’s private – 5
+B. Some parts are public – 3
+C. Entirely public – 0
+
+Do you post real-time updates (e.g., location, travel plans, check-ins)?
+A. Never – 5
+B. Sometimes – 3
+C. Frequently – 0
+
+Do you list your birthdate, phone number, email, or home address on social media?
+A. None of these – 5
+B. Only birthdate – 3
+C. Two or more – 0
+
+Do you share personal milestones (graduation, relationship status, job changes) online?
+A. Rarely or never – 5
+B. Occasionally – 3
+C. Frequently – 0
+
+Have you ever reviewed or updated your privacy settings on social media or apps?
+A. Yes, regularly – 5
+B. Once or twice – 3
+C. Never – 0
+
+Do you read permission prompts before granting access to apps (like microphone, camera, contacts)?
+A. Always – 5
+B. Sometimes – 3
+C. Rarely or never – 0
+
+Do you regularly check your account activity and login history (e.g., Google, Facebook)?
+A. Yes – 5
+B. Occasionally – 3
+C. No – 0
+
+Do you share photos with identifiable info (school logos, license plates, background locations)?
+A. Never – 5
+B. Occasionally – 3
+C. Often – 0
+
+Do you take online quizzes or use personality filter apps that ask for access to your data?
+A. Never – 5
+B. Rarely – 3
+C. Frequently – 0
+
+Do you give your real phone number or email when signing up for free trials or newsletters?
+A. No, I use a throwaway – 5
+B. Sometimes – 3
+C. Always – 0
+
+Do you connect to public Wi-Fi without using a VPN?
+A. Never – 5
+B. Sometimes – 3
+C. Always – 0
+
+Have you ever checked if your email has been part of a data breach (e.g., HaveIBeenPwned)?
+A. Yes – 5
+B. I’ve heard of it but haven’t used it – 3
+C. What’s that? – 0
+
+Do you use different emails for work, personal, and subscriptions?
+A. Yes – 5
+B. Only 2 types – 3
+C. Same for everything – 0
+
+Do you regularly update software, browsers, and antivirus programs?
+A. Yes, auto-updates enabled – 5
+B. I update manually sometimes – 3
+C. I often forget – 0
+
+-------------------------------------------------------------------------------------------------
+
+🔐 Final Score-Based Feedback Summary – “Am I Oversharing?” Privacy Quiz
+
+🟢 85–100: Privacy Pro
+Summary:
+You're a digital privacy champion! Your online habits reflect a deep understanding of cybersecurity best practices. You take active steps to minimize your digital footprint and stay secure.
+
+✅ Key Takeaways:
+Strong password hygiene (unique, long, and secure passwords)
+Active use of two-factor authentication
+Social media profiles are private and carefully curated
+Awareness of app permissions and data sharing
+
+📌 Recommendations:
+Keep up with cybersecurity trends and threats
+Review settings quarterly for changes by platforms
+Teach others—be a privacy role model!
+
+🟡 65–84: Cautiously Aware
+Summary:
+You're aware of digital risks and take precautions, but there’s room for improvement. A few careless habits or outdated practices may be leaving cracks in your digital shield.
+
+🟨 Key Takeaways:
+Generally private but may overshare occasionally
+Some key features like 2FA or password managers may not be fully utilized
+Infrequent privacy setting reviews
+
+📌 Recommendations:
+Enable 2FA on all sensitive accounts
+Avoid reusing passwords—even occasionally
+Perform a privacy check-up on your social media and apps
+
+🟠 45–64: Potential Oversharer
+Summary:
+You're at moderate risk. While you may think your habits are safe, you’re likely oversharing or neglecting important security steps. Hackers love users in this zone—they’re unaware they’re vulnerable.
+
+🧡 Key Takeaways:
+Inconsistent password and device protection
+Social media may expose sensitive data
+Rarely checks permissions or privacy settings
+
+📌 Recommendations:
+Immediately secure major accounts with strong passwords and 2FA
+Set all profiles to private
+Use a VPN on public Wi-Fi and limit personal info in posts
+
+🔴 0–44: Oversharing Alert!
+Summary:
+You’re likely oversharing and unintentionally exposing yourself to scams, identity theft, and tracking. Your current habits create high-risk vulnerabilities in your online presence.
+
+🚨 Key Takeaways:
+Reused passwords and poor authentication practices
+Public or oversharing social media profiles
+Ignorance of privacy controls and data exposure
+
+📌 Urgent Actions:
+Change all important passwords immediately and use a password manager
+Enable 2FA on every account that offers it
+Review privacy settings on Google, Facebook, Instagram, etc.
+Stop posting real-time locations and personal milestones publicly
+Educate yourself through trusted resources (e.g., Mozilla, EFF, CyberAware)
+
+-------------------------------------------------------------------------------------------------------------

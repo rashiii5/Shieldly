@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Result</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #2e004f;
+            color: #ffffff;
+            opacity: 0;
+            animation: fadeIn 1s ease-in-out forwards;
+            padding: 20px;
+        }
+
+        h1, h2 {
+            font-size: 36px;
+            font-weight: 500;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); 
+        }
+
+        .result {
+            background-color: #4b006e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); 
+            text-align: left;
+            max-width: 700px;
+            width: 100%;
+            animation: slideIn 1s ease-in-out forwards;
+        }
+
+        .result p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+
+        .category-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        .pro { color: #2ecc71; }
+        .aware { color: #f1c40f; }
+        .oversharer { color: #e67e22; }
+        .alert { color: #e74c3c; }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 8px;
+        }
+
+        .giphy-embed {
+            display: block;
+            margin: 20px auto;
+            border-radius: 8px;
+            animation: slideInGiphy 1s ease-in-out forwards;
+            animation-delay: 1s;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 25px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #f3f3f3;
+        }
+
+        .quiz-button {
+            padding: 15px 30px;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+            border: none;
+            border-radius: 8px;
+            background-color: #8e44ad;
+            color: #ffffff;
+            text-decoration: none;
+            transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s, color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        .quiz-button:hover {
+            background-color: #732d91;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .quiz-button:active {
+            transform: translateY(1px);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInGiphy {
+            from {
+                opacity: 0;
+                transform: translateX(-100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="result">
+        <h2>🔐 Quiz Result</h2>
+        <p><strong>Your Score:</strong> {{ score }} / {{ total_questions * 5 }}</p>
+        <br>
+
+        {% set percentage = (score / (total_questions * 5)) * 100 %}
+
+        {% if percentage >= 85 %}
+            <p class="category-title pro">🟢 Privacy Pro</p>
+            <p>You're a digital privacy champion! Your online habits reflect a deep understanding of cybersecurity best practices. You take active steps to minimize your digital footprint and stay secure.</p>
+            <p><strong>✅ Key Takeaways:</strong></p>
+            <ul>
+                <li>Strong password hygiene (unique, long, and secure passwords)</li>
+                <li>Active use of two-factor authentication</li>
+                <li>Social media profiles are private and carefully curated</li>
+                <li>Awareness of app permissions and data sharing</li>
+            </ul>
+            <p><strong>📌 Recommendations:</strong></p>
+            <ul>
+                <li>Keep up with cybersecurity trends and threats</li>
+                <li>Review settings quarterly for platform changes</li>
+                <li>Teach others—be a privacy role model!</li>
+            </ul>
+            <iframe src="https://giphy.com/embed/xTcf0ZivxjkGRYYiRy" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+        {% elif percentage >= 65 %}
+            <p class="category-title aware">🟡 Cautiously Aware</p>
+            <p>You're aware of digital risks and take precautions, but there’s room for improvement. A few careless habits or outdated practices may be leaving cracks in your digital shield.</p>
+            <p><strong>🟨 Key Takeaways:</strong></p>
+            <ul>
+                <li>Generally private but may overshare occasionally</li>
+                <li>Some key features like 2FA or password managers may not be fully utilized</li>
+                <li>Infrequent privacy setting reviews</li>
+            </ul>
+            <p><strong>📌 Recommendations:</strong></p>
+            <ul>
+                <li>Enable 2FA on all sensitive accounts</li>
+                <li>Avoid reusing passwords—even occasionally</li>
+                <li>Perform a privacy check-up on your social media and apps</li>
+            </ul>
+            <iframe src="https://giphy.com/embed/5PtBx29UQ5G9lR9zMc" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+        {% elif percentage >= 45 %}
+            <p class="category-title oversharer">🟠 Potential Oversharer</p>
+            <p>You're at moderate risk. While you may think your habits are safe, you’re likely oversharing or neglecting important security steps. Hackers love users in this zone—they’re unaware they’re vulnerable.</p>
+            <p><strong>🧡 Key Takeaways:</strong></p>
+            <ul>
+                <li>Inconsistent password and device protection</li>
+                <li>Social media may expose sensitive data</li>
+                <li>Rarely checks permissions or privacy settings</li>
+            </ul>
+            <p><strong>📌 Recommendations:</strong></p>
+            <ul>
+                <li>Immediately secure major accounts with strong passwords and 2FA</li>
+                <li>Set all profiles to private</li>
+                <li>Use a VPN on public Wi-Fi and limit personal info in posts</li>
+            </ul>
+            <iframe src="https://giphy.com/embed/VELC2400W8PbG" width="250" height="140" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+        {% else %}
+            <p class="category-title alert">🔴 Oversharing Alert!</p>
+            <p>You’re likely oversharing and unintentionally exposing yourself to scams, identity theft, and tracking. Your current habits create high-risk vulnerabilities in your online presence.</p>
+            <p><strong>🚨 Key Takeaways:</strong></p>
+            <ul>
+                <li>Reused passwords and poor authentication practices</li>
+                <li>Public or oversharing social media profiles</li>
+                <li>Ignorance of privacy controls and data exposure</li>
+            </ul>
+            <p><strong>📌 Urgent Actions:</strong></p>
+            <ul>
+                <li>Change all important passwords immediately and use a password manager</li>
+                <li>Enable 2FA on every account that offers it</li>
+                <li>Review privacy settings on Google, Facebook, Instagram, etc.</li>
+                <li>Stop posting real-time locations and personal milestones publicly</li>
+                <li>Educate yourself through trusted resources (e.g., Mozilla, EFF, CyberAware)</li>
+            </ul>
+            <iframe src="https://giphy.com/embed/11xVhnKOKtAj5e" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        {% endif %}
+
+        <div style="text-align: center;">
+            <button class="quiz-button" onclick="location.href='{{ url_for('privacy_awareness') }}'">Privacy Awareness</button>
+        </div>
+    </div>
+
+    <a href="{{ url_for('quiz_main') }}">Back to Home</a>
+
+</body>
+</html>

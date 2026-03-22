@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Privacy Awareness – Am I Oversharing?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2e004f, #4b006e);
+            color: #ffffff;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 900px;
+            background-color: rgba(255, 255, 255, 0.08);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.4);
+        }
+
+        h1, h2, h3 {
+            color: #f0e5ff;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 30px;
+        }
+
+        p, li {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-top: 10px;
+            padding-left: 25px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #5e2b85;
+        }
+
+        .tip {
+            margin-top: 30px;
+            font-style: italic;
+            color: #ddd;
+        }
+
+        .quiz-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 30px;
+            background-color: #8e44ad;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .quiz-button:hover {
+            background-color: #732d91;
+        }
+
+        .back-link {
+            margin-top: 40px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        .back-link:hover {
+            color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔒 Am I Oversharing? – Privacy Awareness</h1>
+
+    <div class="container">
+        <h2>🧠 Why This Matters</h2>
+        <p>Oversharing online puts your identity, security, and reputation at risk. From scammers to data trackers, many parties can misuse what you post. This page helps you recognize where you're vulnerable and how to fix it.</p>
+
+        <h2>🕵️‍♀️ How Oversharing Hurts You</h2>
+        <ul>
+            <li><strong>Identity theft:</strong> Personal info can be pieced together by criminals.</li>
+            <li><strong>Targeted scams:</strong> Info from posts can make phishing attacks more believable.</li>
+            <li><strong>Physical threats:</strong> Real-time updates can reveal when your home is empty.</li>
+            <li><strong>Job risks:</strong> Oversharing may affect your professional reputation.</li>
+            <li><strong>Tracking:</strong> Companies and third parties build behavioral profiles from public data.</li>
+        </ul>
+
+        <h2>📍 Common Oversharing Platforms</h2>
+        <ul>
+            <li>Instagram Stories and live check-ins</li>
+            <li>Facebook updates with personal milestones</li>
+            <li>Twitter threads and opinions</li>
+            <li>Dating app bios and photos</li>
+            <li>LinkedIn work history and contacts</li>
+            <li>Public WhatsApp or Telegram statuses</li>
+        </ul>
+
+        <h2>👁️‍🗨️ Oversharing Red Flags</h2>
+        <table>
+            <tr>
+                <th>❌ Risk Behavior</th>
+                <th>✅ Safer Alternative</th>
+            </tr>
+            <tr>
+                <td>Live vacation updates</td>
+                <td>Post after returning</td>
+            </tr>
+            <tr>
+                <td>Showing IDs, plates, or addresses</td>
+                <td>Blur or crop sensitive data</td>
+            </tr>
+            <tr>
+                <td>Using real email for random sites</td>
+                <td>Use alias or disposable emails</td>
+            </tr>
+            <tr>
+                <td>Daily location sharing</td>
+                <td>Keep locations general</td>
+            </tr>
+            <tr>
+                <td>Public profiles</td>
+                <td>Switch to private & limit access</td>
+            </tr>
+        </table>
+
+        <h2>🧭 What You Can Do</h2>
+        <ul>
+            <li>Use strong, unique passwords and a manager</li>
+            <li>Enable 2FA on all accounts</li>
+            <li>Set social profiles to private</li>
+            <li>Review app permissions and privacy settings monthly</li>
+            <li>Think before you post — would you tell this to a stranger?</li>
+        </ul>
+
+        <h2>👩‍🏫 Bonus Tip: Google Yourself!</h2>
+        <p>Search your name, phone number, and email online to see what info is already public. It’s a great wake-up call.</p>
+
+        <div class="tip">💡 Want to reassess your digital habits?</div>
+        <a href="{{ url_for('quiz') }}" class="quiz-button">🛡️ Take the Privacy Quiz!</a>
+        <br><br>
+        <a href="{{ url_for('quiz_main') }}" class="back-link">Back to Home</a>
+    </div>
+</body>
+</html>

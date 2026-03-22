@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steganography Toy - Hide Message</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2e004f, #4b006e);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 16px;
+            text-align: center;
+            max-width: 700px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 25px 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+
+        textarea, input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button {
+            padding: 12px;
+            background-color: #8e44ad;
+            color: white;
+            border: none;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #732d91;
+        }
+
+        .tip {
+            margin-top: 20px;
+            font-style: italic;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        a.back {
+            color: #fff;
+            text-decoration: none;
+            margin-top: 30px;
+            font-size: 16px;
+        }
+
+        a.back:hover {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>🕵️‍♀️ Steganography Toy</h1>
+
+    <p class="description">
+        Steganography is the art of hiding secret messages inside seemingly ordinary files — like images or audio — so no one even knows a message is there. <br><br>
+        In this tool, your secret text is concealed inside the pixels of an image using a method called <strong>Least Significant Bit (LSB) encoding</strong>. It’s like writing in invisible ink, but in digital form!<br><br>
+        Use it to secretly share a password, code, or surprise message. But remember: anyone who knows about steganography can try to extract it — so use responsibly!
+    </p>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label for="image">Upload Image (PNG recommended):</label>
+        <input type="file" name="image" accept="image/*" required>
+
+        <label for="message">Secret Message:</label>
+        <textarea name="message" rows="4" placeholder="Enter your secret message here..." required></textarea>
+
+        <button type="submit">🔐 Hide Message in Image</button>
+    </form>
+
+    <p class="tip">💡 Only someone with this tool can decode the message. Keep it secret, keep it safe!</p>
+
+    <a href="{{ url_for('quiz_main') }}" class="back">Back to Home</a>
+</body>
+</html>

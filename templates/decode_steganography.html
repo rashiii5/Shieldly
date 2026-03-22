@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Steganography Decoder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #2e004f, #4b006e);
+            color: #ffffff;
+            margin: 0;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .description {
+            font-size: 16px;
+            text-align: center;
+            max-width: 600px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        input[type="file"] {
+            background-color: #fff;
+            color: #000;
+            padding: 12px;
+            border-radius: 6px;
+            font-size: 16px;
+            border: none;
+            width: 300px;
+        }
+
+        button {
+            padding: 12px 24px;
+            background-color: #8e44ad;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        button:hover {
+            background-color: #732d91;
+            transform: translateY(-2px);
+        }
+
+        button:active {
+            transform: translateY(1px);
+        }
+
+        .loading-message {
+            display: none;
+            font-style: italic;
+            font-size: 16px;
+            margin-top: 10px;
+            color: #f0e5ff;
+        }
+
+        .loading-message img {
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .result-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px 30px;
+            border-radius: 10px;
+            max-width: 600px;
+            text-align: center;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .back-link {
+            margin-top: 40px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #dddddd;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🕵️‍♀️ Decode Hidden Message</h1>
+
+    <p class="description">
+        Upload a PNG image that may contain a hidden message. Our tool will extract the message hidden inside the pixels using steganography decoding.
+        <br><br>
+        If the message was encoded using the Steganography Toy, it should reveal a secret string that was invisibly embedded in the image. 🔍
+    </p>
+
+    <form id="decodeForm" method="POST" enctype="multipart/form-data" onsubmit="showLoading()">
+        <input type="file" name="image" accept="image/png" required>
+        <button type="submit">Decode</button>
+    </form>
+
+    <p class="loading-message" id="loadingMessage">
+        <img src="https://i.gifer.com/YCZH.gif" alt="loading" width="30"> Decoding, please wait...
+    </p>
+
+    {% if message %}
+    <div class="result-box">
+        <h3>🔓 Hidden Message Found:</h3>
+        <p>{{ message }}</p>
+    </div>
+    {% elif error %}
+    <div class="result-box">
+        <h3>❌ Error</h3>
+        <p>{{ error }}</p>
+    </div>
+    {% endif %}
+
+    <a class="back-link" href="{{ url_for('quiz_main') }}">Back to Home</a>
+
+    <script>
+        function showLoading() {
+            document.getElementById('loadingMessage').style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
