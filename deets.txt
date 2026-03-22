@@ -1,4 +1,4 @@
-📋 Instructions:
+Instructions:
 Select the option that best reflects your behavior.
 Each question is scored out of 5 points.
 Maximum score: 100
@@ -106,65 +106,64 @@ C. I often forget – 0
 
 -------------------------------------------------------------------------------------------------
 
-🔐 Final Score-Based Feedback Summary – “Am I Oversharing?” Privacy Quiz
+Final Score-Based Feedback Summary – “Am I Oversharing?” Privacy Quiz
 
-🟢 85–100: Privacy Pro
+85–100: Privacy Pro
 Summary:
 You're a digital privacy champion! Your online habits reflect a deep understanding of cybersecurity best practices. You take active steps to minimize your digital footprint and stay secure.
 
-✅ Key Takeaways:
+Key Takeaways:
 Strong password hygiene (unique, long, and secure passwords)
 Active use of two-factor authentication
 Social media profiles are private and carefully curated
 Awareness of app permissions and data sharing
 
-📌 Recommendations:
+Recommendations:
 Keep up with cybersecurity trends and threats
 Review settings quarterly for changes by platforms
 Teach others—be a privacy role model!
 
-🟡 65–84: Cautiously Aware
+65–84: Cautiously Aware
 Summary:
 You're aware of digital risks and take precautions, but there’s room for improvement. A few careless habits or outdated practices may be leaving cracks in your digital shield.
 
-🟨 Key Takeaways:
+Key Takeaways:
 Generally private but may overshare occasionally
 Some key features like 2FA or password managers may not be fully utilized
 Infrequent privacy setting reviews
 
-📌 Recommendations:
+Recommendations:
 Enable 2FA on all sensitive accounts
 Avoid reusing passwords—even occasionally
 Perform a privacy check-up on your social media and apps
 
-🟠 45–64: Potential Oversharer
+45–64: Potential Oversharer
 Summary:
 You're at moderate risk. While you may think your habits are safe, you’re likely oversharing or neglecting important security steps. Hackers love users in this zone—they’re unaware they’re vulnerable.
 
-🧡 Key Takeaways:
+Key Takeaways:
 Inconsistent password and device protection
 Social media may expose sensitive data
 Rarely checks permissions or privacy settings
 
-📌 Recommendations:
+Recommendations:
 Immediately secure major accounts with strong passwords and 2FA
 Set all profiles to private
 Use a VPN on public Wi-Fi and limit personal info in posts
 
-🔴 0–44: Oversharing Alert!
+0–44: Oversharing Alert!
 Summary:
 You’re likely oversharing and unintentionally exposing yourself to scams, identity theft, and tracking. Your current habits create high-risk vulnerabilities in your online presence.
 
-🚨 Key Takeaways:
+Key Takeaways:
 Reused passwords and poor authentication practices
 Public or oversharing social media profiles
 Ignorance of privacy controls and data exposure
 
-📌 Urgent Actions:
+Urgent Actions:
 Change all important passwords immediately and use a password manager
 Enable 2FA on every account that offers it
 Review privacy settings on Google, Facebook, Instagram, etc.
 Stop posting real-time locations and personal milestones publicly
 Educate yourself through trusted resources (e.g., Mozilla, EFF, CyberAware)
-
 -------------------------------------------------------------------------------------------------------------
