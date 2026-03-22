@@ -4,6 +4,8 @@ Each question is scored out of 5 points.
 Maximum score: 100
 Minimum score: 0
 
+----------
+
 Do you reuse the same password for multiple accounts?
 A. Never – 5 points
 B. Sometimes – 3 points
